@@ -51,46 +51,62 @@
         </svg>
         Tv Shows
       </button>
-      <summary id="filter">
-        <select>
+      <div class="filter-select">
+        <select aria-label="Filter by genre">
           <option>Action</option>
           <option>Romance</option>
           <option>Comedy</option>
           <option>Thriller</option>
           <option>Sci-fi</option>
         </select>
-      </summary>
+      </div>
     </div>
 
-    <div id="content">
-      <a href="https://youtu.be/daXaTug8rL4?si=AG-C_784EuAywdcn" style="text-decoration: none;">
-      <figure style="background-color: #162235; width: 300px; padding: 1px; border-radius: 10px;">
-        <img
-          src="images/SBND.jpg"
-          alt="Triangle you'll get it when your network stablizes"
-          width="300"
-          height="300"
-        />
-        <figcaption
-          style="
-            background-color: #162235;
-            border-radius: 5px;
-            width: 279px;
-            padding-left: 10px;
-            padding: 10px;
-            padding-top: 10px;
-          "
-        >
-          Spiderman Brand New Day <br />
-          <small
-            style="color: rgba(164, 164, 165, 0.5); background-color: #162235;"
-            >2026</small
-          >
-        </figcaption>
-      </figure>
-      </a>
+    <div class="content-row">
+      <div class="content-card">
+        <a href="https://youtu.be/daXaTug8rL4?si=AG-C_784EuAywdcn" class="movie-link">
+          <figure class="movie-figure">
+            <img
+              class="movie-image"
+              src="images/SBND.jpg"
+              alt="Spiderman Brand New Day poster"
+            />
+            <figcaption class="movie-caption">
+              <span class="movie-title">Spiderman Brand New Day</span>
+              <small class="movie-year">2026</small>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="content-card">
+        <a href="https://youtu.be/n9xhJrPXop4?si=ESLA1_RfsTjWdp5p" class="movie-link">
+          <figure class="movie-figure">
+            <img class="movie-image" src="images/Dune.jpg" alt="Dune poster" />
+            <figcaption class="movie-caption">
+              <span class="movie-title">Dune Part 1</span>
+              <small class="movie-year">2021</small>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="content-card">
+        <a href="https://youtu.be/N-J-HR3quc4?si=OqOs0HLgP2My-96X" class="movie-link">
+          <figure class="movie-figure">
+            <img
+              class="movie-image"
+              src="images/72 Hours.jpg"
+              alt="Spiderman Brand New Day poster"
+            />
+            <figcaption class="movie-caption">
+              <span class="movie-title">72 Hours</span>
+              <small class="movie-year">2026</small>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
     </div>
 
+   
     <script src="landing-page.js"></script>
   </body>
 </html>
