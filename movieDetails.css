@@ -1,0 +1,273 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #020C17;
+    color: #CBD5E1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* HEADER */
+
+header {
+    width: min(92%, 1400px);
+    margin: 2rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    width: clamp(9rem, 10vw, 12rem);
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#search-bar form {
+    position: relative;
+}
+
+#search-bar input {
+    width: clamp(22rem, 30vw, 30rem);
+    height: 3rem;
+    background: transparent;
+    border: 1px solid #21324C;
+    border-radius: .7rem;
+    padding: 0 3.5rem 0 1rem;
+    color: white;
+    font-size: .95rem;
+    outline: none;
+}
+
+#search-bar input::placeholder {
+    color: #B7BDC9;
+}
+
+#search-bar form i {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#search-bar img {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* HERO */
+
+#hero {
+    width: min(92%, 1400px);
+    margin: 3rem auto;
+    height: 80vh;
+}
+
+#heroDivs-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(2rem, 4vw, 4rem);
+}
+
+/* IMAGE SIDE */
+
+#img-side {
+    flex: 1.6;
+}
+
+#img-side img {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+/* TEXT SIDE */
+
+#text-side {
+    flex: 1;
+    padding-top: 1.2rem;
+}
+
+#text-side h3 {
+    font-size: clamp(3rem, 4vw, 4rem);
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 1.6rem;
+    color: #FFFF;
+}
+
+/* RATINGS */
+
+#ratings {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-bottom: 2.4rem;
+    color: #B8BEC8;
+}
+
+#ratings p {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    font-size: 1.2rem;
+}
+
+.divider {
+    width: 1px;
+    height: 1.2rem;
+    background: #CBD5E1;
+}
+
+#dot {
+    width: .35rem;
+    height: .35rem;
+    border-radius: 50%;
+    background: #CBD5E1;
+}
+
+/* DESCRIPTION */
+
+#description h4 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+#description p {
+    color: #C2C8D1;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+/* CTAs */
+
+#icons-and-CTAs {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#icons-and-CTAs a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .45rem;
+    color: #D4D7DE;
+    transition: .25s;
+}
+
+#icons-and-CTAs a i,
+#icons-and-CTAs a svg {
+    font-size: 1.5rem;
+}
+
+#icons-and-CTAs a:hover {
+    color: #fff;
+}
+
+/* PLAY BUTTON */
+
+#icons-and-CTAs a:first-child {
+    flex-direction: row;
+    gap: .8rem;
+    background: #7B3FF2;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#icons-and-CTAs a:first-child:hover {
+    background: #8d58f4;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    #heroDivs-wrapper {
+        flex-direction: column;
+    }
+
+    #img-side,
+    #text-side {
+        width: 100%;
+    }
+
+    #text-side {
+        padding-top: 0;
+    }
+
+    #search-bar input {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #search-bar {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #search-bar input {
+        width: 100%;
+    }
+
+    #search-bar form {
+        flex: 1;
+    }
+
+    #icons-and-CTAs {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    #text-side h3 {
+        font-size: 2.5rem;
+    }
+
+    #ratings {
+        flex-wrap: wrap;
+    }
+}
