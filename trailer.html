@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---EXTERNAL LINK-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!--INTERNAL LINK-->
+    
+    <title>The Odyssey</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #020C17;
+            margin: 0px 50px 0px 50px;
+        }
+
+        header {
+            padding: 30px;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Oswald' sans-serif;
+            background-color: #7B3FF2;
+            color: #FFF;
+            width: 5rem;
+            height: 3rem;
+            border-radius: 10%;
+        }
+
+        a:hover {
+            background: #8d58f4;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        div {
+            width: 70%;
+            height: 80%;
+            border-radius: 20px;
+            /* border: 1px solid #7B3FF2; */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #7B3FF2;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="movieDetails.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+    </header>
+
+    <section>
+        <div id="parent-div">
+            <iframe
+                src="https://www.youtube.com/embed/Mzw2ttJD2qQ" 
+                frameborder="50rem"
+                allow="autoplay; picture-in-picture; gyroscope"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </section>
+</body>
+</html>
