@@ -88,10 +88,14 @@ img {
 .btn-icon {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
-  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  border: none;
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* ==========================================
@@ -129,7 +133,7 @@ img {
   color: var(--text-muted);
   font-weight: 400;
   margin-left: 1px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
@@ -213,7 +217,8 @@ img {
 /* ==========================================
    5. STATS STRIP & METRICS
    ========================================== */
-.stats-strip, .metrics-row {
+.stats-strip,
+.metrics-row {
   display: flex;
   justify-content: space-around;
   padding: 30px 5%;
@@ -222,12 +227,14 @@ img {
   text-align: center;
 }
 
-.stat-item h3, .metric-item h2 {
+.stat-item h3,
+.metric-item h2 {
   font-size: 1.8rem;
   color: #fff;
 }
 
-.stat-item p, .metric-item p {
+.stat-item p,
+.metric-item p {
   color: var(--text-muted);
   font-size: 0.9rem;
 }
@@ -312,7 +319,8 @@ img {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.media-card, .platform-card {
+.media-card,
+.platform-card {
   background: var(--bg-card);
   border-radius: 12px;
   overflow: hidden;
@@ -320,26 +328,31 @@ img {
   transition: transform 0.2s ease;
 }
 
-.media-card:hover, .platform-card:hover {
+.media-card:hover,
+.platform-card:hover {
   transform: translateY(-4px);
   background: var(--bg-card-hover);
 }
 
 /* Image wrappers ensuring uniform image framing */
-.card-image-wrapper, .card-image-placeholder {
+.card-image-wrapper,
+.card-image-placeholder {
   width: 100%;
   height: 280px;
   overflow: hidden;
   position: relative;
 }
 
-.card-image-wrapper img, .card-image-placeholder img, .platform-card img {
+.card-image-wrapper img,
+.card-image-placeholder img,
+.platform-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.card-info, .platform-card {
+.card-info,
+.platform-card {
   padding: 16px;
 }
 
@@ -416,7 +429,7 @@ img {
    ========================================== */
 .cta-banner {
   position: relative;
-  margin: 60px 5%;
+  margin: 60px 6%;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border-color);
@@ -425,24 +438,22 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 1282px;
+  height: 568px;
 }
 
 /* Correct positioning structure for CTA card content */
 .cta-banner .cta-bg-wrapper {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
+  object-fit: fill;
 }
 
-.cta-banner .cta-bg-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.45;
-}
+
 
 .cta-banner .badge-pill,
 .cta-banner h2,
@@ -460,6 +471,12 @@ img {
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
+  background-image: url('/images/footer-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  width: 1282px;
+  height: 568px;
 }
 
 .badge-pill {
@@ -656,7 +673,8 @@ img {
     font-size: 2.2rem;
   }
 
-  .stats-strip, .metrics-row {
+  .stats-strip,
+  .metrics-row {
     flex-direction: column;
     gap: 16px;
   }
@@ -699,6 +717,7 @@ img {
   .newsletter-form {
     flex-direction: column;
   }
+
 }
 
 /* Small Mobile Screens (<= 480px) */
@@ -714,35 +733,77 @@ img {
   .brand-tagline {
     display: none;
   }
+
   .btn-social {
-  width: 100%;
-  padding: 10px 16px;
-  background-color: #ffffff;
-  color: #1f2937 !important; /* Ensures dark text contrast */
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  margin: 16px 0;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+    width: 100%;
+    padding: 10px 16px;
+    background-color: #ffffff;
+    color: #1f2937 !important;
+    /* Ensures dark text contrast */
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    margin: 16px 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .btn-social:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+  }
+
+  /* Google SVG Icon Size Fix */
+  .google-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .action-row {
+    width: 342px;
+  }
+
+  .btn-icon {
+    padding: 1px;
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    width: 87px;
+    height: auto;
+  }
+
+  #iconify {
+    font-size: large;
+  }
+  
+  .cta-banner {
+    width: 90%;
+    background-color: #070a12;
+  }
+
+  .cta-bg-wrapper {
+    background: none;
+  }
+
 }
 
-.btn-social:hover {
-  background-color: #f9fafb;
-  border-color: #9ca3af;
-}
-
-/* Google SVG Icon Size Fix */
-.google-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
+/* Do Not Touch*/
+iconify-icon {
   display: inline-block;
-  vertical-align: middle;
+  width: 1em;
+  height: 1em;
 }
+
+#iconify {
+  width: 1.2em;
+  height: 1.2em;
 }
