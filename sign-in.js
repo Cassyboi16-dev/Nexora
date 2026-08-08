@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       alert('Account successfully created!');
+      window.location.href = '/NEXORA.html'
       hideModal();
     });
   }
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
       alert('Logged in successfully!');
+      window.location.href = '/NEXORA.html'
       hideModal();
     });
   }
