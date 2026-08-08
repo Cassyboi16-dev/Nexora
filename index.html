@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexora - Discover movies across all platforms</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/Nexora-Logo (2).png"
+      width="420"
+      height="420"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sign-in.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <style>
+      .logo {
+        display: flex;
+        width: auto;
+        height: 72px;
+        flex-direction: row;
+        align-items: center;
+        gap: 2px;
+      }
+      .logo-1 {
+        width: 68px;
+        height: 65px;
+        /* object-fit: contain; */
+      }
+      .logo-2 {
+        width: auto;
+        height: auto;
+        margin: 0 4px 0 -6px;
+        font-weight: 800;
+        font-size: 2.5rem;
+        line-height: 1;
+        letter-spacing: 1px;
+        color: #f4f6fb;
+      }
+      .brand-logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5px;
+      }
+      .brand-tagline {
+        align-self: center;
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="brand-logo">
+        <div class="logo">
+          <img
+            src="../images/Nexora-Logo (2).png"
+            alt="Nexora Logo"
+            class="logo-1"
+          />
+          <h1 class="logo-2">exora</h1>
+        </div>
+        <span class="brand-tagline">Discover • Watch • Enjoy</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#movies">Movies</a>
+        <a href="#genres">Genres</a>
+        <a href="#spotlight">Spotlight</a>
+        <a href="#platforms">Platforms</a>
+      </nav>
+      <div class="nav-auth">
+        <button id="openLoginBtn" class="btn-secondary">Sign In</button>
+        <button id="openSignupBtn" class="btn-primary">Get Started</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg-wrapper">
+        <img src="/images/JOHN WICK.jpeg" alt="Hero Background" />
+      </div>
+      <div class="hero-content">
+        <span class="sub-heading">ALL YOUR MOVIES, ONE PLACE</span>
+        <h1>
+          Discover movies across <span class="text-pink">all platforms</span>
+        </h1>
+        <p>
+          Nexora helps you discover and watch movies from Netflix, Prime Video,
+          Disney+, and Hulu all in one place.
+        </p>
+        <button class="btn-primary open-signup-trigger">Get Started</button>
+      </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="stats-strip">
+      <div class="stat-item">
+        <h3>10,000+</h3>
+        <p>Movies & Shows</p>
+      </div>
+      <div class="stat-item">
+        <h3>4K HDR</h3>
+        <p>Ultra HD Quality</p>
+      </div>
+      <div class="stat-item">
+        <h3>Any Device</h3>
+        <p>Watch Anywhere</p>
+      </div>
+    </section>
+
+    <!-- Trending Movies Section with Dynamic Search & Filters -->
+    <section class="content-section" id="movies">
+      <span class="section-tag">FEATURED MOVIES</span>
+
+      <div class="section-header-row">
+        <h2 class="section-title">Trending Now</h2>
+
+        <!-- Real-time Search Input -->
+        <div class="search-box">
+          <input
+            type="text"
+            id="movieSearchInput"
+            placeholder="Search movies by title..."
+            autocomplete="off"
+          />
+          <span class="search-icon">🔍</span>
+        </div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-genre="all">All</button>
+        <button class="filter-btn" data-genre="sci-fi">Sci-Fi</button>
+        <button class="filter-btn" data-genre="action">Action</button>
+        <button class="filter-btn" data-genre="drama">Drama</button>
+      </div>
+
+      <!-- Movie Card Grid -->
+      <div class="card-grid col-4" id="movieGrid">
+        <div
+          class="media-card"
+          data-title="the odyssey"
+          data-genre="sci-fi action"
+        >
+          <div class="card-image-wrapper">
+            <img src="/images/oddy1.jpg" alt="The Odyssey" />
+          </div>
+          <a href="movieDetails.html" class="card-info">
+            <h4>The Odyssey</h4>
+            <span>2024 • Sci-Fi / Action</span>
+          </a>
+        </div>
+
+        <div class="media-card" data-title="moana" data-genre="drama">
+          <div class="card-image-wrapper">
+            <img src="/images/images3.jpg" alt="Moana" />
+          </div>
+          <a href="movieDetails.html" class="card-info">
+            <h4>Moana</h4>
+            <span>2024 • Animation / Drama</span>
+          </a>
+        </div>
+
+        <div
+          class="media-card"
+          data-title="project hail mary"
+          data-genre="sci-fi"
+        >
+          <div class="card-image-placeholder">
+            <img src="/images/images (2).jpg" alt="Project Hail Mary" />
+          </div>
+          <a href="movieDetails.html" class="card-info">
+            <h4>Project Hail Mary</h4>
+            <span>2024 • Sci-Fi</span>
+          </a>
+        </div>
+
+        <div class="media-card" data-title="the fall guy" data-genre="action">
+          <div class="card-image-placeholder">
+            <img src="/images/images4.jpg" alt="The Fall Guy" />
+          </div>
+          <a href="movieDetails.html" class="card-info">
+            <h4>The Fall Guy</h4>
+            <span>2024 • Action</span>
+          </a>
+        </div>
+      </div>
+
+      <p id="noResultsMsg" class="no-results hidden">
+        No movies found matching your search.
+      </p>
+    </section>
+
+    <!-- Browse by Genre -->
+    <section class="content-section" id="genres">
+      <span class="section-tag">EXPLORE</span>
+      <h2 class="section-title">Browse by Genre</h2>
+      <div class="genre-grid">
+        <div class="genre-card"><span>Sci-Fi</span></div>
+        <div class="genre-card"><span>Action</span></div>
+        <div class="genre-card"><span>Thriller</span></div>
+        <div class="genre-card"><span>Drama</span></div>
+        <div class="genre-card"><span>Romance</span></div>
+        <div class="genre-card"><span>Comedy</span></div>
+        <div class="genre-card"><span>Horror</span></div>
+      </div>
+    </section>
+
+    <!-- Spotlight Feature -->
+    <section class="content-section" id="spotlight">
+      <span class="section-tag">NEW RELEASE</span>
+      <h2 class="section-title">Nexora Spotlight</h2>
+      <div class="spotlight-card">
+        <div class="spotlight-poster">
+          <img src="/images/oddy2.jpg" alt="The Odyssey Spotlight" />
+        </div>
+        <div class="spotlight-details">
+          <h3>The Odyssey</h3>
+          <div class="meta-row">★ 8.9 | 2024 | 2h 45m | Sci-Fi • Action</div>
+          <p class="description">
+            Odysseus, king of Ithaca, embarks on a perilous journey to return
+            home after the Trojan War. Crossing the Mediterranean Sea, he and
+            his crew battle mythical creatures and fierce elements.
+          </p>
+          <div class="action-row">
+            <button class="btn-primary">▶️ Play</button>
+            <button class="btn-icon">♡ Watchlist</button>
+            <button class="btn-icon">⤤ Share</button>
+            <button class="btn-icon">⤓ Download</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="content-section" id="platforms">
+      <span class="section-tag">EXPLORE</span>
+      <h2 class="section-title">Platforms</h2>
+      <div class="card-grid col-4">
+        <div class="platform-card">
+          <img src="/images/download01.jpg" alt="Netflix" />
+          <div class="card-info">
+            <h3>NETFLIX</h3>
+            <p>6,000+ Movies</p>
+            <button class="btn-primary">Explore →</button>
+          </div>
+        </div>
+        <div class="platform-card">
+          <img src="/images/images01.jpg" alt="Prime Video" />
+          <div class="card-info">
+            <h3>PRIME VIDEO</h3>
+            <p>5,000+ Movies</p>
+            <button class="btn-primary">Explore →</button>
+          </div>
+        </div>
+        <div class="platform-card">
+          <img src="/images/images02.jpg" alt="Disney+" />
+          <div class="card-info">
+            <h3>DISNEY+</h3>
+            <p>3,000+ Movies</p>
+            <button class="btn-primary">Explore →</button>
+          </div>
+        </div>
+        <div class="platform-card">
+          <img src="/images/images03.jpg" alt="Hulu" />
+          <div class="card-info">
+            <h3>HULU</h3>
+            <p>1,800+ Movies</p>
+            <button class="btn-primary">Explore →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Bar -->
+    <section class="metrics-row">
+      <div class="metric-item">
+        <h2>2M+</h2>
+        <p>Active Viewers</p>
+      </div>
+      <div class="metric-item">
+        <h2>10K+</h2>
+        <p>Movies & Shows</p>
+      </div>
+      <div class="metric-item">
+        <h2>4.9</h2>
+        <p>User Rating</p>
+      </div>
+      <div class="metric-item">
+        <h2>7+</h2>
+        <p>Platforms Covered</p>
+      </div>
+      <div class="metric-item">
+        <h2>99.9%</h2>
+        <p>Uptime Guarantee</p>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="cta-bg-wrapper">
+        <img src="/images/cta.jpg" alt="CTA Background" />
+        <span class="badge-pill">★ JOIN NEXORA TODAY</span>
+        <h2>Ready for Better <span class="text-pink">Movie Discovery</span></h2>
+        <p>
+          Compare streaming platforms, discover trending movies, and build your
+          watchlist—all in one place.
+        </p>
+        <div class="cta-actions">
+          <button class="btn-primary open-signup-trigger">
+            ▶️ Get Started
+          </button>
+          <a href="#movies" class="btn-outline">Explore Movies</a>
+        </div>
+        <div class="cta-features">
+          <span>✓ No Credit card required</span>
+          <span>🔒 Secure & encrypted</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-col brand-col">
+          <div class="logo">
+            <img
+              src="../images/Nexora-Logo (2).png"
+              alt="Nexora Logo"
+              class="logo-1"
+            />
+            <h1 class="logo-2">exora</h1>
+          </div>
+          <p>
+            Your smart hub for discovering, tracking, and streaming the best
+            movies across all platforms.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#movies">Movies</a>
+          <a href="#genres">Genres</a>
+          <a href="#platforms">Platforms</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Features</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-col newsletter-col">
+          <h4>Stay in the loop</h4>
+          <p>Get the latest movie recommendations delivered to your inbox.</p>
+          <form
+            class="newsletter-form"
+            onsubmit="
+              event.preventDefault();
+              alert('Subscribed!');
+            "
+          >
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Nexora. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- AUTH MODAL SYSTEM -->
+    <div class="modal-overlay hidden" id="authModal">
+      <div class="screen-overlay">
+        <button class="close-modal" id="closeModalBtn">&times;</button>
+
+        <!-- SIGN IN CARD -->
+        <main class="login-card auth-view" id="loginView">
+          <div class="brand-logo">
+        <div class="logo">
+          <img
+            src="../images/Nexora-Logo (2).png"
+            alt="Nexora Logo"
+            class="logo-1"
+          />
+          <h1 class="logo-2">exora</h1>
+        </div>
+          <h1 class="form-title">Log in</h1>
+          <button type="button" class="btn-social">
+            <i class="bi bi-google"></i>
+            Sign in with Google
+          </button>
+          <div class="separator-text">Or sign in with</div>
+          <form id="loginForm">
+            <div class="form-group">
+              <input type="email" placeholder="Enter email address" required />
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Enter password" required />
+            </div>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+            <button type="submit" class="btn-primary full-width">
+              Sign In
+            </button>
+          </form>
+          <div class="form-footer">
+            Don't have an account?
+            <a href="#" id="switchToSignup" class="signup-link">Sign Up</a>
+          </div>
+        </main>
+
+        <!-- SIGN UP CARD -->
+        <main class="login-card auth-view hidden" id="signupView">
+         <div class="brand-logo">
+        <div class="logo">
+          <img
+            src="../images/Nexora-Logo (2).png"
+            alt="Nexora Logo"
+            class="logo-1"
+          />
+          <h1 class="logo-2">exora</h1>
+        </div>
+          <h1 class="form-title">Sign Up</h1>
+          <button type="button" class="btn-social">
+            <i class="bi bi-google"></i>
+            Sign up with Google
+          </button>
+          <div class="separator-text">Or sign up with</div>
+          <form id="signupForm">
+            <div class="form-group">
+              <input type="text" placeholder="Enter full name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Enter email address" required />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="signupPass"
+                placeholder="Create password"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="signupConfirmPass"
+                placeholder="Confirm password"
+                required
+              />
+            </div>
+            <div class="terms-group">
+              <label class="checkbox-container">
+                <input type="checkbox" required />
+                <span class="terms-text"
+                  >I agree to the
+                  <a href="#" class="pink-link">Terms & Policy</a></span
+                >
+              </label>
+            </div>
+            <button type="submit" class="btn-primary full-width">
+              Create account
+            </button>
+          </form>
+          <div class="form-footer">
+            Already have an account?
+            <a href="#" id="switchToLogin" class="signup-link">Log In</a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="sign-in.js"></script>
+  </body>
+</html>
