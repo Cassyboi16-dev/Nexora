@@ -62,11 +62,23 @@
     color: var(--accent-pink);
     font-size: 20px;
   }
+  .brand-mark{
+    display:flex;
+    align-items:center;
+    font-size:x-large;
+  }
+  .brand-mark img{
+    width:95px;
+    height:95px;
+    object-fit:contain;
+  }
   .brand .tagline{
-    font-size: 11px;
+    font-size: clamp(8px, 1.8vw, 11px);
     color: var(--text-faint);
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    max-width: 100%;
+    white-space: nowrap;
   }
   .search-wrap{
     flex:1;
@@ -349,13 +361,21 @@
     .hero-title{ font-size: 36px; }
     .search-wrap{ display:none; }
   }
+    @media (max-width: 340px){
+      .brand-mark{ font-size:medium; }
+      .brand-mark img{ width:64px; height:64px; }
+      .brand .tagline{ font-size: 8px; letter-spacing: 1px; }
+    }
 </style>
 </head>
 <body>
 
   <header class="topbar">
     <div class="brand">
-      <div class="logo"><span class="bolt">⚡</span>exora</div>
+      <div class="brand-mark">
+        <img src="images/Nexora-Logo (2).png" alt="" width="95" height="95">
+        <h1>exora</h1>
+      </div>
       <div class="tagline">Discover · Watch · Enjoy</div>
     </div>
     <div class="search-wrap">
