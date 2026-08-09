@@ -63,7 +63,7 @@
       <div class="brand-logo">
         <div class="logo">
           <img
-            src="../images/Nexora-Logo (2).png"
+            src="images/Nexora-Logo (2).png"
             alt="Nexora Logo"
             class="logo-1"
           />
@@ -80,6 +80,16 @@
       <div class="nav-auth">
         <button id="openLoginBtn" class="btn-secondary">Sign In</button>
         <button id="openSignupBtn" class="btn-primary">Get Started</button>
+      </div>
+      <div class="mobile-nav-actions" aria-label="Mobile navigation">
+        <button class="mobile-search" type="button" aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="mobile-menu" type="button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -123,17 +133,6 @@
 
       <div class="section-header-row">
         <h2 class="section-title">Trending Now</h2>
-
-        <!-- Real-time Search Input -->
-        <div class="search-box">
-          <input
-            type="text"
-            id="movieSearchInput"
-            placeholder="Search movies by title..."
-            autocomplete="off"
-          />
-          <span class="search-icon">🔍</span>
-        </div>
       </div>
 
       <!-- Filter Buttons -->
@@ -246,33 +245,30 @@
       <h2 class="section-title">Platforms</h2>
       <div class="card-grid col-4">
         <div class="platform-card">
-          <img src="/images/download01.jpg" alt="Netflix" />
+      
           <div class="card-info">
-            <h3>NETFLIX</h3>
+            <iconify-icon icon='logos:netflix' class="platform-name"></iconify-icon>
             <p>6,000+ Movies</p>
             <button class="btn-primary">Explore →</button>
           </div>
         </div>
         <div class="platform-card">
-          <img src="/images/images01.jpg" alt="Prime Video" />
           <div class="card-info">
-            <h3>PRIME VIDEO</h3>
+            <iconify-icon icon="thesvg-color:prime-video" class="platform-name"></iconify-icon>
             <p>5,000+ Movies</p>
             <button class="btn-primary">Explore →</button>
           </div>
         </div>
         <div class="platform-card">
-          <img src="/images/images02.jpg" alt="Disney+" />
           <div class="card-info">
-            <h3>DISNEY+</h3>
+            <iconify-icon icon="thesvg-color:disneyplus" class="platform-name"></iconify-icon>
             <p>3,000+ Movies</p>
             <button class="btn-primary">Explore →</button>
           </div>
         </div>
         <div class="platform-card">
-          <img src="/images/images03.jpg" alt="Hulu" />
           <div class="card-info">
-            <h3>HULU</h3>
+            <iconify-icon icon="selfhst:hulu" class="platform-name" id="hulu"></iconify-icon>
             <p>1,800+ Movies</p>
             <button class="btn-primary">Explore →</button>
           </div>
@@ -311,7 +307,7 @@
         <h2>Ready for Better <span class="text-pink">Movie Discovery</span></h2>
         <p>
           Compare streaming platforms, discover trending movies, and build your
-          watchlist—all in one place.
+          watchlist all in one place.
         </p>
         <div class="cta-actions">
           <button class="btn-primary open-signup-trigger">

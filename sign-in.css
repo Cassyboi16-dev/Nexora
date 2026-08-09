@@ -158,6 +158,10 @@ img {
   gap: 12px;
 }
 
+.mobile-nav-actions {
+  display: none;
+}
+
 /* ==========================================
    4. HERO SECTION
    ========================================== */
@@ -187,6 +191,93 @@ img {
   object-fit: cover;
   opacity: 0.25;
   filter: brightness(0.6);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    width: 100%;
+    padding: 24px 32px 0;
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .brand-logo {
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .logo {
+    height: 54px;
+  }
+
+  .logo-1 {
+    width: 48px;
+    height: 47px;
+  }
+
+  .logo-2 {
+    font-size: 1.9rem;
+  }
+
+  .brand-tagline {
+    align-self: flex-start;
+    margin-left: 0;
+    font-size: 0.86rem;
+    letter-spacing: 0;
+  }
+
+  .nav-links,
+  .nav-auth {
+    display: none;
+  }
+
+  .mobile-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding-top: 6px;
+  }
+
+  .mobile-search,
+  .mobile-menu {
+    color: #fff;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-search {
+    display: grid;
+    width: 45px;
+    height: 45px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 4px 18px rgba(14, 11, 38, 0.2);
+    color: #fff;
+    font-size: 1.65rem;
+  }
+
+  .mobile-menu {
+    display: grid;
+    width: 36px;
+    gap: 5px;
+    padding: 7px 0;
+  }
+
+  .mobile-menu span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    border-radius: 4px;
+    background: #fff;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding-top: 150px;
+  }
 }
 
 .hero-content {
@@ -323,15 +414,25 @@ img {
 .platform-card {
   background: var(--bg-card);
   border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border-color);
   transition: transform 0.2s ease;
+  object-fit: fill;
+  background-image: url('/images/Netflix\ \(2\).jpg');
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 186px;
+  gap: 10px;
+  opacity: 1;
+  border-width: 2px solid;
+  padding-top: 25px;
+  padding-right: 55px;
+  padding-bottom: 25px;
+  padding-left: 55px;
 }
 
 .media-card:hover,
 .platform-card:hover {
   transform: translateY(-4px);
-  background: var(--bg-card-hover);
+  filter: brightness(0.5);
 }
 
 /* Image wrappers ensuring uniform image framing */
@@ -359,11 +460,40 @@ img {
 .card-info h4 {
   font-size: 1rem;
   margin-bottom: 4px;
+  padding: 4px;
 }
 
 .card-info span {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+/*width: 190;
+height: 136;
+gap: 8px;
+angle: 0 deg;
+opacity: 1;
+*/
+.card-info {
+  display: block;
+  justify-content: space-around;
+  gap: 8px;
+  width: 190px;
+  height: 136px;
+  opacity: 1;
+}
+
+.platform-name {
+  width: 190px;
+  height: 56px;
+  opacity: 1;
+  font-size: 50px;
+
+}
+
+#hulu {
+  font-size: 95px;
+  margin-bottom: 4px;
 }
 
 /* Genres Grid */
@@ -520,6 +650,7 @@ img {
   background: #04060c;
   padding: 60px 5% 30px;
   border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .footer-columns {
@@ -659,9 +790,12 @@ img {
 /* Mobile Screens (<= 768px) */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 14px 20px;
+    flex-direction: row;
+    gap: 0;
+    padding: 24px 32px 0;
+    background: transparent;
+    backdrop-filter: none;
+    position: absolute;
   }
 
   .nav-links {
@@ -784,7 +918,7 @@ img {
   #iconify {
     font-size: large;
   }
-  
+
   .cta-banner {
     width: 90%;
     background-color: #070a12;
@@ -806,4 +940,137 @@ iconify-icon {
 #iconify {
   width: 1.2em;
   height: 1.2em;
+}
+
+/* Platforms showcase */
+#platforms .card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+#platforms .platform-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 176px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  border-radius: 14px;
+  background-position: center;
+  background-size: cover;
+}
+
+#platforms .platform-card::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(4, 10, 18, 0.38), rgba(4, 10, 18, 0.7));
+  content: "";
+}
+
+#platforms .platform-card:nth-child(1) {
+  background-image: url('/images/download01.jpg');
+  border-color: rgba(229, 9, 20, 0.7);
+}
+
+#platforms .platform-card:nth-child(2) {
+  background-image: url('/images/images01.jpg');
+  border-color: rgba(0, 126, 255, 0.7);
+}
+
+#platforms .platform-card:nth-child(3) {
+  background-image: url('/images/images02.jpg');
+  border-color: rgba(0, 198, 219, 0.7);
+}
+
+#platforms .platform-card:nth-child(4) {
+  background-image: url('/images/images03.jpg');
+  border-color: rgba(29, 227, 103, 0.7);
+}
+
+#platforms .platform-card:hover {
+  filter: brightness(1.08);
+  transform: translateY(-4px);
+}
+
+#platforms .card-info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+#platforms .platform-name {
+  width: min(190px, 80%);
+  height: 48px;
+  font-size: 44px;
+}
+
+#platforms #hulu {
+  height: 48px;
+  margin-bottom: 0;
+  font-size: 78px;
+}
+
+#platforms .card-info p {
+  margin: 0;
+  color: #d8e0ed;
+  font-size: 0.82rem;
+}
+
+#platforms .card-info .btn-primary {
+  min-width: 124px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 7px;
+  background: rgba(18, 25, 37, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 1024px) {
+  #platforms .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  #platforms .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #platforms .platform-card {
+    height: 170px;
+  }
+}
+
+/* Restore movie cards independently from the platform showcase */
+#movies .media-card {
+  width: auto;
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background-image: none;
+}
+
+#movies .media-card:hover {
+  filter: none;
+  transform: translateY(-4px);
+}
+
+#movies .card-info {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 16px;
+  opacity: 1;
 }
