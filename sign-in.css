@@ -439,7 +439,7 @@ img {
 .card-image-wrapper,
 .card-image-placeholder {
   width: 100%;
-  height: 280px;
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -449,7 +449,7 @@ img {
 .platform-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .card-info,
@@ -830,6 +830,13 @@ opacity: 1;
     font-size: 1.6rem;
   }
 
+  #call-to-action,
+  #call-to-action .cta-bg-wrapper {
+    background-color: var(--bg-dark);
+    background-image: none;
+    border: none;
+  }
+
   .cta-actions {
     flex-direction: column;
     width: 100%;
@@ -838,6 +845,10 @@ opacity: 1;
   .cta-features {
     flex-direction: column;
     gap: 8px;
+    align-items: start;
+    justify-content: left;
+    width: 280px;
+    height: 60px;
   }
 
   .footer-columns {
@@ -921,13 +932,36 @@ opacity: 1;
 
   .cta-banner {
     width: 90%;
-    background-color: #070a12;
+    background-color: var(--bg-dark) !important;
   }
 
   .cta-bg-wrapper {
-    background: none;
+    background: var(--bg-dark);
   }
 
+  .btn-primary {
+    font-size: small;
+    display: flex;
+    text-align: center;
+  }
+
+  #get-footer span {
+    margin-left: 4.5rem;
+    text-align: center;
+  }
+
+  #get-footer {
+    width: 100%;
+  }
+  
+  section{
+    background-color: var(--bg-dark);
+  }
+
+  #subscribe{
+    font-size: small;
+    text-align: center;
+  }
 }
 
 /* Do Not Touch*/
@@ -941,7 +975,9 @@ iconify-icon {
   width: 1.2em;
   height: 1.2em;
 }
-
+#explore-footer{
+  border-color: #EC4899;
+}
 /* Platforms showcase */
 #platforms .card-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1073,4 +1109,14 @@ iconify-icon {
   height: auto;
   padding: 16px;
   opacity: 1;
+}
+
+#huluCard {
+  display: block;
+  justify-content: space-around;
+  gap: 8px;
+  width: 190px;
+  height: 136px;
+  opacity: 1;
+  padding-top: 25px;
 }
