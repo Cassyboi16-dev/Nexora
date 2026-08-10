@@ -169,9 +169,9 @@ img {
   position: relative;
   min-height: 75vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: left;
+  text-align: left;
   padding: 60px 20px;
 }
 
@@ -194,6 +194,24 @@ img {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    isolation: isolate;
+  }
+
+  .hero-bg-wrapper {
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-bg-wrapper img {
+    width: 100%;
+    object-fit: cover;
+  }
+
   .navbar {
     position: absolute;
     width: 100%;
@@ -284,13 +302,29 @@ img {
   max-width: 700px;
 }
 
+/*font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 20px;
+letter-spacing: 0.5%;
+
+*/
 .hero-content .sub-heading {
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  color: var(--accent-pink);
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: normal;
+  letter-spacing: 0.5%;
+  color: var(--accent-purple);
+  font-weight: 600px;
+  margin-top: 15px;
   display: block;
+  border: var(--accent-purple) solid 1px;
+  border-radius: 8px;
+  width: 230px;
+  height: 40px;
+  gap: 8px;
+  padding: 0.5rem;
 }
 
 .hero-content h1 {
@@ -501,17 +535,39 @@ opacity: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 12px;
+  object-fit: fill;
+  filter: blur(0.9);
 }
 
 .genre-card {
-  background: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 20px;
+  padding: 0;
   border-radius: 10px;
   text-align: center;
   font-weight: 600;
   cursor: pointer;
+  object-fit: fill;
+  position: relative;
+  overflow: hidden;
 }
+
+.genre-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.genre-card span {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 /* Spotlight Card */
 .spotlight-card {
@@ -953,12 +1009,23 @@ opacity: 1;
   #get-footer {
     width: 100%;
   }
-  
-  section{
+
+  #get-hero {
+    width: 60%;
+    padding: 18px;
+  }
+
+  #get-hero span {
+    font-size: large;
+    font-weight: 600;
+    margin-left: 0.9rem;
+  }
+
+  section {
     background-color: var(--bg-dark);
   }
 
-  #subscribe{
+  #subscribe {
     font-size: small;
     text-align: center;
   }
@@ -975,9 +1042,11 @@ iconify-icon {
   width: 1.2em;
   height: 1.2em;
 }
-#explore-footer{
+
+#explore-footer {
   border-color: #EC4899;
 }
+
 /* Platforms showcase */
 #platforms .card-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
